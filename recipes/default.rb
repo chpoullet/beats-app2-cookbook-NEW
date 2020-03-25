@@ -38,11 +38,6 @@ execute 'enable_module_syslogs' do
   command 'sudo filebeat modules enable system'
 end
 
-
-execute 'enable_module_nginx' do
-  command 'sudo filebeat modules enable nginx'
-end
-
 template 'etc/metricbeat/metricbeat.yml' do
   source 'metricbeat.yml.erb'
   mode '666'
@@ -67,6 +62,10 @@ end
 
 execute 'fix_template' do
   command 'sudo chmod go-w /etc/filebeat/filebeat.yml'
+end
+
+execute 'enable_module_nginx' do
+  command 'sudo filebeat modules enable nginx'
 end
 
 service 'metricbeat' do
