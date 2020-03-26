@@ -26,5 +26,6 @@ describe 'beatsapp2_cookbook::default' do
     it 'filebeat' do
      expect(chef_run).to install_package "filebeat"
     end
- end
+  end
+end
 
