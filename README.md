@@ -1,6 +1,6 @@
 # Beats cookbook for app
 
-This cookbook sets up filebeat and metricbeat on an instance. It is then called later in Packer as another cookbook. Filebeat and metricbeat are both data shippers. They can send data to Logstash, or straight to Elasticsearch.
+This cookbook sets up filebeat and metricbeat on an instance. It is then called later in Packer as another cookbook. Filebeat and metricbeat are both data shippers. They can send data to Logstash, or directly to Elasticsearch.
 
 Filebeat is a lightweight shipper for logs whereas Metricbeat is a lightweight shipper for metric data.
 
