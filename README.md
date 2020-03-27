@@ -21,5 +21,3 @@ kitchen test
 ```
 
 ![Beats logo](https://www.juvo.be/sites/default/files/banner_0.png)
-
-hi
