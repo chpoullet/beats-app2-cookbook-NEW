@@ -15,16 +15,25 @@ describe 'beatsapp2_cookbook::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
-  end
-  
+
     it 'should update source list' do
       expect(chef_run).to update_apt_update('update_sources')
     end
+    
     it 'metricbeat' do
      expect(chef_run).to install_package "metricbeat"
     end
+    
     it 'filebeat' do
      expect(chef_run).to install_package "filebeat"
+    end
+    
+    it 'should create a metricbeat template in etc/metricbeat/metricbeat.yml' do
+      expect(chef_run).to create_template('etc/metricbeat/metricbeat.yml')
+    end
+    
+    it 'should create a filebeat template in etc/filebeat/filebeat.yml' do
+      expect(chef_run).to create_template('etc/filebeat/filebeat.yml')
     end
   end
 end
