@@ -1,4 +1,4 @@
-# Beats cookbook for app
+# Beats cookbook for APP
 
 This cookbook sets up filebeat and metricbeat on an instance. It is then called later in Packer as another cookbook. Filebeat and metricbeat are both data shippers. They can send data to Logstash, or directly to Elasticsearch.
 
